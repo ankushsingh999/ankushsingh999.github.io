@@ -45,14 +45,16 @@
 								<li><a href="#Experience">Experience</a></li>
 								<li><a href="#Research">Research</a></li>
 								<li><a href="#Projects">Projects</a></li>
+								<li><a href="CV.pdf" target="_blank">CV</a></li>
 								<li><a href="#contact">Contact</a></li>
-								<li><a href="#elements">Elements</a></li>
 							</ul>
 						</nav>
 					</header>
 
 				<!-- Main -->
 					<div id="main">
+
+						
 
 						<!-- Intro -->
 							<article id="Aboutme">
@@ -314,9 +316,384 @@
 						<!-- Elements -->
 							<article id="Projects">
 								<h2 class="major">Projects</h2>
+								<p><i>** Please click on the individual project titles or Read More to look at the outputs and detailed explaination of each project.</i></p>
+								<blockquote>
+								<p>
+									<div>
+										<h3 style="text-decoration: underline;"> <a href="#Sim2Real"><b>Sim2Real Window Navigation in Autonomous Drone Racing</b></a></h3>
+									</div>
+									<p style="font-size: 0.8em;">This project involved navigating a DJI Tello nano drone through a complex track with simulated and real windows, utilizing deep learning for window detection, and real-world coordinate mapping with PnP algorithms. It featured a blend of classical computer vision techniques and innovative planning and control strategies, tested in both simulated and real environments to demonstrate the drone's autonomous navigation capabilities.</p>
+									<a href="#Sim2Real">Read More</a>
+								</p>
+							</blockquote>
+							<blockquote>
+								<p>
+									<div>
+										<h3 style="text-decoration: underline;"> <a href="#OpticalFlow"><b>UNKNOWN GAP NAVIGATION FOR MOBILE ROBOTS: REAL-TIME DETECTION AND PRECISION MANEUVERING</b></a></h3>
+									</div>
+									<p style="font-size: 0.8em;">
+										The "Unknown Gap Navigation for Mobile Robots" project focused on navigating mobile robots through irregular gaps using real-time optical flow and strategic visual servoing. It involved overcoming hardware limitations of small size mobile robots like DJI Tello drones with the NVIDIA Jetson Orin Nano for advanced processing. The project's effectiveness was validated through testing in the Blender environment and live demonstrations, proving its applicability in real-world scenarios like search and rescue missions.</p>
+									<a href="#OpticalFlow">Read More</a>
+								</p>
+							</blockquote>
+
+							<blockquote>
+								<p>
+									<div>
+										<h3 style="text-decoration: underline;"> <a href="#UKF"><b>Sensor Fusion in IMU Pose Estimation: Integrating Complementary, Madgwick, and Unscented Kalman Filters</b></a></h3>
+									</div>
+									<p style="font-size: 0.8em;">
+										The project involved integrating Complementary, Madgwick, and <b>Unscented Kalman Filter</b> to accurately determine the 3D orientation of an IMU. It focused on calibrating and aligning sensor data against Vicon motion capture systems, ensuring precise estimations. The project highlighted the superior performance of the Unscented Kalman Filter in pose accuracy, demonstrating the effectiveness of advanced sensor fusion techniques in complex orientation tracking.</p>
+									<a href="#UKF">Read More</a>
+								</p>
+							</blockquote>
+
+							<blockquote>
+								<p>
+									<div>
+										<h3 style="text-decoration: underline;"> <a href="#smc"><b>Robust Sliding Mode Control for Precision Trajectory Tracking </b></a></h3>
+									</div>
+									<p style="font-size: 0.8em;">
+										
+									The project harnessed Sliding Mode Control (SMC) to master complex trajectory tracking with the Crazyflie 2.0 micro air vehicle (simulation). It entailed designing robust control laws and integrating them with ROS for precise navigation and stability, even in the presence of external disturbances. Successful trials underscored the effectiveness of the control approach, marked by the UAV's smooth flight path adherence and minimal trajectory deviation.
+									</p>
+									<a href="#smc">Read More</a>
+								</p>
+							</blockquote>
+
+							<blockquote>
+								<p>
+									<div>
+										<h3 style="text-decoration: underline;"> <a href="#yol"><b>Real Time Instance Segmentation using Modified YOLACT</b></a></h3>
+									</div>
+									<p style="font-size: 0.8em;">
+									
+									The project enhanced YOLACT's real-time instance segmentation by integrating a modified ResNet backbone with Channel Attention Models (CAM) and a novel contextual loss function, significantly improving segmentation performance. The refined model demonstrated superior precision, evidenced by a 12% increase in mean average precision (mAP) and enhanced MaskIOU. Rigorous performance evaluations confirmed the model's efficacy in real-time applications, achieving 18.1 fps in video segmentation and showcasing marked improvements in complex scenario handling.
+									</p>
+									<a href="#yol">Read More</a>
+								</p>
+							</blockquote>
+
+							<blockquote>
+								<p>
+									<div>
+										<h3 style="text-decoration: underline;"> <a href="#dmp"><b>Dynamic Motion Planning for Autonomous Navigation : Implementing Advanced Algorithms for Real-time Navigation</b></a></h3>
+									</div>
+									<p style="font-size: 0.8em;">
+									The project focused on optimizing advanced motion planning algorithms, including RRTx (Rapidly-exploring random trees), OP-RRT (Obstacle Potential - RRT), and OP-PRM ((Obstacle Potential - Probablistic Road Map)), for dynamic navigation in mobile robotics. Utilizing the ROS Husky simulation platform, it addressed real-time path planning challenges in unpredictable environments, demonstrating improved navigation efficiency and safety. Extensive testing in the Gazebo simulation environment validated the effectiveness of these algorithms in scenarios like obstacle avoidance and narrow corridor traversal.</p>
+									<a href="#dmp">Read More</a>
+								</p>
+							</blockquote>
+
+							<blockquote>
+								<p>
+									<div>
+										<h3 style="text-decoration: underline;"> <a href="#calib"><b>Optimization-Based Kinematic Calibration of Hexapod Stewart Platform: Enhancing Precision through Boundary-Conscious Configurations</b></a></h3>
+									</div>
+									<p style="font-size: 0.8em;">
+										The project "Optimization-Based Kinematic Calibration of Hexapod Stewart Platform" involved precise calibration of the hexapod manipulator using advanced optimization techniques and strategic configuration selection near the workspace boundary. It featured robust kinematic modeling, integration of velocity Jacobian, and meticulous validation, ensuring high precision in robotic maneuvers. The successful application of least squares optimization and workspace boundary analysis culminated in significantly enhanced calibration accuracy, demonstrated through detailed visualizations.
+								</p>
+									<a href="#calib">Read More</a>
+								</p>
+							</blockquote>
+
+							</article> 
+
+						<!-- Sim2Real -->
+							<article id="Sim2Real">
+							
+								<h2 style="text-decoration: underline;"> Sim2Real Window Navigation in Autonomous Drone Racing</h2>
+										<p>
+										<ul>
+											<li><b>Drone Racing Challenge:</b> Utilized DJI Tello nano drone for navigating a complex track featuring windows, an unknown irregular gap, and a dynamic window.
+												<div style="display: flex; justify-content: center; align-items: center; margin-top: 10px;">
+													<div style="text-align: center; margin-right: 10px;">
+														<img src="images/window.png" alt="First Image Description" style="width: auto; max-width: 50%; height: auto;"/>
+														<p style="font-size: 0.8em;">A photo of the window on the track in simulation.</p>
+													</div>
+													<div style="text-align: center; margin-left: 10px;">
+														<img src="images/realtrack.png" alt="Second Image Description" style="width: auto; max-width: 70%; height: auto;"/>
+														<p style="font-size: 0.8em;">The real Drone Racing Track.</p>
+													</div>
+												</div>
+											</li>
+											<li><b>Window Detection with Deep Learning:</b> Employed the drone's monocular camera along with a custom U-Net architecture to run on NVIDIA Jetson Orin Nano for precise window segmentation.</li>
+											<li><b>Sim2Real Transition:</b> Leveraged Blender for simulating realistic environments, enhancing the drone's adaptability from virtual to real-world settings.</li>
+											</ul>
+											<div>
+											<img src="images/windows.png" alt="Windows on Blender" style="width: auto; max-width: 100%; height: auto;"/>
+											<p style="text-align: center; font-size: 0.8em;">The image shows a sample dataset of windows created on Blender.</p>
+											</div>
+											<ul>
+											<li><b>Classical Computer Vision Techniques:</b> Post-U-Net segmentation, applied classical computer vision methods for accurate localization of window corners.</li>
+											<li><b>Perspective-n-Point (PnP) Application:</b> Implemented PnP algorithms for real-world coordinate determination, ensuring safe navigation through windows.</li>
+											<li><b>Pre-Known Window Locations:</b> Integrated approximate window location knowledge for efficient and accurate real-time image processing.</li>
+										</ul>
+									
+										<h4>Planning, Control, and Integration Stack</h4>
+										<ul>
+											<li><b>3D Pose Estimation:</b> Employed camera calibration and PnP techniques to ascertain the drone's 3D pose relative to windows.</li>
+											</ul>
+											<div style="text-align: center;">
+												<img src="images/calib.png" alt="Windows on Blender" style="width: auto; max-width: 50%; height: auto;"/>
+												<p style="text-align: center; font-size: 0.8em;">Camera calibration performed using MATLAB, the intrinsic and extrensics were obtained.</p>
+												</div>
+												<ul>
+											<li><b>Navigation Strategy:</b> Devised RRT* and created quinitc trajectories to plot a path through the closest window, leveraging real-time position and orientation data.</li>
+										</ul>
+
+										<h4>Hardware Integration and Computational Approach</h4>
+										<ul>
+											<li><b>Drone Hardware Limitations:</b> Utilized a nano drone (DJI Tello), which lacks onboard computing capabilities.</li>
+											<li><b>Computing with Jetson Orin Nano:</b> Employed NVIDIA Jetson Orin Nano for processing and running neural networks, communicating with the drone via WiFi.</li>
+											<li><b>Neural Network Design:</b> Developed a lightweight neural network optimized for real-time inferences, crucial for effective autonomous navigation.</li>
+										</ul>
+									
+										<h4>Live Demonstration and Testing</h4>
+										<div style="text-align: center;">
+											<img src="images/inference.png" alt="Windows on Blender" style="width: auto; max-width: 100%; height: auto;"/>
+											<p style="text-align: center; font-size: 0.8em;">The image shows real time inferences obtained by the UNet architecture, while the drone was in motion.</p>
+											</div>
+										<ul>
+											<li>Successfully showcased the autonomous navigation of DJI Tello through a windowed track in a live demonstration.</li>
+											<li>Displayed real-time detections and 3D pose estimations, validating the effectiveness of the developed sim2real approach.</li>
+											<li>Executed the trajectory through the windows after obtaing the 3D pose of windows and estimating a safe way point.</li>
+										</ul>
+										<div style="text-align: center;">
+										<video width="420" height="240" controls>
+											<source src="videos/pnp.mp4" type="video/mp4">
+											Your browser does not support the video tag.
+										</video>
+										<p style="text-align: center; font-size: 0.8em;"> <!-- You can adjust the font size as needed -->
+											This video demonstrates the DJI tello drone taking live inference and passing through the window.
+										</p>
+										</div>
+									
+										</p>
 							</article>
 
+									
+						<!-- Sim2Real -->
+						<article id="OpticalFlow">
+							<h2 style="text-decoration: underline;">Unknown Gap Navigation for Mobile Robots: Real-Time Detection and Precision Maneuvering</h2>
+										<div style="text-align: center;">
+											<img src="images/gap.png" alt="Windows on Blender" style="width: auto; max-width: 65%; height: 50%;"/>
+											<p style="text-align: center; font-size: 0.8em;">The image shows an irregular and unknown gap to be crossed.</p>
+											</div>
+										<ul>
+											<li><b>Challenging Drone Navigation:</b> Addressed the complexities of flying through unpredictable windows in real-world environments, simulating scenarios common in search and rescue, and reconnaissance missions.</li>
+											<li><b>Hardware Adaptation:</b> Overcame the computing limitations of the DJI Tello nano drone by integrating NVIDIA Jetson Orin Nano for advanced computational tasks and neural network processing.</li>
+											<li><b>Innovative Perception Approach - Optical Flow:</b> Implemented SPyNET for real-time optical flow computation combined with Canny edge detection, enabling the drone to effectively locate and assess the largest gap within its field of view.</li>
+											<li><b>Testing:</b> testing is conducted on four pre-defined window shapes in the Blender environment. This approach allowed for the experimentation of different window textures and shapes using provided assets. The effectiveness of the drone's detection capability was measured using the Intersection over Union (IoU) metric.</li>
+										</ul>
+										<div style="display: flex; justify-content: center; align-items: center; margin-top: 10px;">
+											<div style="text-align: center; margin-right: 10px;">
+												<img src="images/texture1.png" alt="First Image Description" style="width: auto; max-width: 75%; height: auto;"/>
+												<p style="font-size: 0.8em;">A photo of arbitrary shape with different textures for testing created on Blender.</p>
+											</div>
+											<div style="text-align: center; margin-right: 10px; margin-left: 10px;">
+												<img src="images/textres.png" alt="Second Image Description" style="width: auto; max-width: 75%; height: auto;"/>
+												<p style="font-size: 0.8em;">The Optical Flow visualized after running it through SPyNET.</p>
+											</div>
+											<div style="text-align: center; margin-left: 10px;">
+												<img src="images/iou.png" alt="Third Image Description" style="width: auto; max-width: 100%; height: auto;"/>
+												<p style="font-size: 0.8em;">Comparision the contour obtained with the Ground truth using IoU metric.</p>
+											</div>
+										</div>
+										<ul>
+											<li><b>Strategic Visual Servoing:</b> Executed visual servoing techniques to enhance UAV maneuverability and precision in navigating through detected gaps.</li>
+											<li><b>Autonomous Flight and Control:</b> Developed and integrated comprehensive planning and control algorithms, facilitating autonomous drone flight through various window challenges with high accuracy and safety.</li>
+											<li><b>Practical Demonstration Success:</b> Demonstrated the effectiveness of the gap detection and visual servoing methodologies in a live setting, proving the concept’s practicality for real-world applications.</li>
+										</ul>
 
+										<div style="display: flex; justify-content: center; align-items: center; margin-top: 10px;">
+											<div style="text-align: center; margin-right: 10px;">
+												<img src="images/gap2.png" alt="First Image Description" style="width: auto; max-width: 100%; height: auto;"/>
+												<p style="font-size: 0.8em;">Photo of the irregular gap taken by DJI Tello on flight needed to be detected during demonstration.</p>
+											</div>
+											<div style="text-align: center; margin-left: 10px;">
+												<img src="images/opres.png" alt="Second Image Description" style="width: auto; max-width: 100%; height: auto;"/>
+												<p style="font-size: 0.8em;">Visualization of the optical flow calculated from real time inference. The red dot indicates the center of the largest contour.</p>
+											</div>
+										</div>
+											<div style="text-align: center;">
+												<video width="420" height="240" controls>
+													<source src="videos/of.mp4" type="video/mp4">
+													Your browser does not support the video tag.
+												</video>
+												<p style="text-align: center; font-size: 0.8em;"> <!-- You can adjust the font size as needed -->
+													This video demonstrates the DJI tello drone detecting an unknown gap and Maneuvering through it.
+												</p>
+											</div>
+							
+						</article>
+
+						<!-- UKF -->
+						<article id="UKF">
+							<h2 style="text-decoration: underline;">Sensor Fusion in IMU Pose Estimation: Integrating Complementary, Madgwick, and Unscented Kalman Filters</h2>
+							<ul>
+								<li><b>Comprehensive IMU Pose Estimation:</b> Implemented three advanced filters - Complementary, Madgwick, and Unscented Kalman Filter - for 3D orientation estimation of an IMU, leveraging accelerometer and gyroscope data.</li>
+								<li><b>Data Calibration:</b> Utilized ArduIMU+ V2, a 6-DoF sensor, and calibrated IMU data against Vicon motion capture system for ground truth comparison, ensuring accurate sensor readings.</li>
+								<li><b>Filter Comparison and Analysis:</b> Analyzed and compared the effectiveness of each filter with Vicon data, with UKF demonstrating the highest accuracy in estimating the IMU's pose.</li>
+								<li><b>Sensor Fusion Techniques:</b> Explored sensor fusion methodologies through these filters to refine the estimation of the IMU's 3D orientation, emphasizing on the fusion of accelerometer and gyroscope data for enhanced accuracy.</li>
+								<li><b>Visualization and Verification:</b> Used rotplot.py for visualizing the orientation outputs of the filters, aligning and verifying these outputs with the Vicon system's data for accurate pose estimation validation.</li>
+								<li><b>Effective Visualization:</b> Employed rotplot.py for detailed orientation visualization, aligning IMU estimations with ground truth for robust validation.</li>
+							</ul>
+							
+							<div style="text-align: center;">
+								<img src="images/ukf1.png" alt="Windows on Blender" style="width: auto; max-width: 100%; height: auto;"/>
+								</div>
+							
+							<div style="text-align: center;">
+								<img src="images/ukf2.png" alt="Windows on Blender" style="width: auto; max-width: 100%; height: auto;"/>
+								<p style="text-align: center; font-size: 0.8em;">The images show comparision of Complementary, Madgwick and Unscented Kalman Filter against the Vicon Ground Truth Data.</p>
+								</div>
+
+								<div style="text-align: center;">
+									<video width="420" height="240" controls>
+										<source src="videos/rotplotukf.mp4" type="video/mp4">
+										Your browser does not support the video tag.
+									</video>
+									<p style="text-align: center; font-size: 0.8em;"> <!-- You can adjust the font size as needed -->
+										This video demonstrates the rotplot visualization of the Unscented Kalman Filter.
+									</p>
+								</div>
+						
+						</article>
+
+						<!-- smc -->
+						<article id="smc">
+							<h2 style="text-decoration: underline;">Robust Sliding Mode Control for Precision Trajectory Tracking</h2>
+							<ul>
+								<li><b>Project Overview:</b> Developed a robust control scheme for the Crazyflie 2.0 quadrotor, focusing on precise trajectory tracking amidst external disturbances using MATLAB and ROS.</li>
+								<li><b>Crazyflie 2.0 MAV:</b> Utilized the lightweight (27 grams) Crazyflie 2.0 (simulation) micro air vehicle, equipped with coreless DC motors, for dynamic and responsive flight control experiments.</li>
+								<li><b>Dynamic Model and Sliding Mode Control:</b> Modeled quadrotor dynamics and implemented a sliding mode control approach for effective altitude and attitude adjustments to adhere to the desired trajectories.</li>
+								<li><b>Trajectory Generation:</b> Generated quintic trajectories for the Crazyflie's translational coordinates, ensuring smooth waypoint navigation with zero velocity and acceleration at each point.</li>
+								<li><b>Control Law Implementation:</b> Designed boundary layer-based sliding mode control laws for precise altitude and attitude control, enabling efficient waypoint tracking.</li>
+								<li><b>ROS Integration for Real-time Evaluation:</b> Developed a ROS node in Python or MATLAB to simulate and evaluate the control design's performance in the Gazebo environment, ensuring real-world applicability and robustness.</li>
+								<li><b>Successful Results:</b> Achieved smooth and stable quadrotor movement with minimal overshoot or oscillations, confirming the effectiveness of the control script in trajectory tracking.</li>
+							</ul>
+							
+
+								<div style="text-align: center;">
+									<video width=575 height=auto controls>
+										<source src="videos/smc.mp4" type="video/mp4">
+										Your browser does not support the video tag.
+									</video>
+								</div>
+
+								<div style="text-align: center;">
+									<img src="images/smc.png" alt="Windows on Blender" style="width: auto; max-width: 75%; height: auto;"/>
+									<p style="text-align: center; font-size: 0.8em;">The video and the graph show us that the UAV converges to the reference trajectory in fraction of seconds and the error between the desired and actual trajectories is minimal.</p>
+									</div>
+						
+						</article>
+
+						<!-- yol -->
+						<article id="yol">
+							<h2 style="text-decoration: underline;">Real Time Instance Segmentation using Modified YOLACT</h2>
+							<ul>
+								<li><b>Advanced Instance Segmentation:</b> Developed an enhanced real-time segmentation model based on YOLACT by implementing Mask R-CNN with custom configurations and backbone architecture, integrating Feature Pyramid Networks (FPNs).</li>
+								<li><b>YOLACT Architecture Enhancement:</b> Improved the YOLACT framework's segmentation performance and prediction confidence by modifying the ResNet backbone with Channel Attention Models (CAM), specifically tailored for complex segmentation scenarios.</li>
+								<li><b>Contextual Loss Function Integration:</b> Incorporated a novel contextual loss function, leading to a significant increase in mean average precision (mAP) by 12 percent and better MaskIOU, ensuring refined segmentation accuracy.</li>
+								<li><b>Channel Attention Mechanism:</b> Adopted the channel attention mechanism inspired by "Squeeze-and-Excitation Networks" to adaptively recalibrate feature maps channel-wise, thereby enhancing feature extraction and model responsiveness.</li>
+								<li><b>Comprehensive Segmentation Analysis:</b> Utilized advanced analytical techniques, including Global Average and Max Pooling followed by Fully Connected layers with ReLU activation, to optimize channel attention and further refine feature map outputs.</li>
+								<li><b>Performance Evaluation:</b> Conducted rigorous testing and performance evaluation, demonstrating that the modified YOLACT model achieved higher mAP compared to the traditional YOLACT, despite a minor trade-off in frames per second (fps).</li>
+								</ul>
+								<div style="text-align: center;">
+									<img src="images/yolres.png" alt="Windows on Blender" style="width: auto; max-width: 75%; height: auto;"/>
+								</div>
+								<ul>
+								<li><b>Visual Proof of Concept:</b> Showcased the model's enhanced prediction capability and segmentation accuracy through visual before-and-after comparisons, highlighting the effectiveness of the channel attention model and the contextual loss function.</li>
+								</ul>
+								<h3>Before</h3>
+								<div style="text-align: center;">
+									<img src="images/yol1.png" alt="Windows on Blender" style="width: auto; max-width: 75%; height: auto;"/>
+								</div>
+								<h3>After</h3>
+								<div style="text-align: center;">
+									<img src="images/yol1a.png" alt="Windows on Blender" style="width: auto; max-width: 75%; height: auto;"/>
+								</div>
+								<li><b>Real-Time Video Segmentation Achievement:</b> Successfully attained real-time instance segmentation on videos, achieving an operational speed of 18.1 fps, thereby demonstrating the model's applicability and efficiency in dynamic, real-world environments.</li>
+							</ul>
+							<div style="text-align: center;">
+								<img src="videos/yolv.gif" alt="RRTx Husky Robot Implementation" style="width: auto; height: auto;"/>
+								<p style="text-align: center; font-size: 0.8em;">We acknowledge that this video has been sourced from the public domain and has been used by us to test our instance segmentation network. We do not claim any ownership or credit for its content.</p>
+							</div>
+						
+						</article>
+	
+
+						<!-- dmp -->
+						<article id="dmp">
+							<h2 style="text-decoration: underline;">Dynamic Motion Planning for Autonomous Navigation : Implementing Advanced Algorithms for Real-time Navigation</h2>
+							<ul>
+								<li><b>Project Overview:</b> Focused on optimizing motion planning algorithms such as RRTx, OP-RRT and OP-PRM to enable robust navigation of mobile robots in dynamic environments using the ROS Husky simulation platform.</li>
+								<li><b>Complex Environment Navigation:</b> Addressed the challenges of navigating through dynamic environments with unpredictable obstacles and changing conditions, crucial for applications in autonomous vehicles, robotics, industrial automation, service robots, drones, and logistics.</li>
+								<li><b>Algorithm Implementation and Comparison:</b> Implemented and compared the efficiency of sampling-based algorithms like OP-PRM, Risk-DTRRT, and RRTx in navigating narrow passages and dynamic scenarios, using ROS Husky as a testbed.</li>
+								<li><b>Real-time Path Planning:</b> Enhanced real-time trajectory generation and path planning capabilities by integrating offline and reactive path-planning algorithms, with a focus on improving safety and efficiency in autonomous navigation.</li>
+								<li><b>Algorithmic Innovations:</b> Developed innovative solutions like obstacle potential-based PRM (OP-PRM) for effective sampling in narrow corridors and integrated APF sampling for improved navigation in cluttered environments.</li>
+								<li><b>Extensive Testing and Evaluation:</b> Conducted rigorous testing of algorithms in simulated environments using ROS Husky, focusing on obstacle avoidance, narrow corridor traversal, dynamic goal tracking, and goal re-planning to validate the performance of the proposed solutions.</li>
+								<li><b>Simulation and Real-time Performance:</b> Utilized the Gazebo simulation environment to test and evaluate motion planning algorithms, ensuring the practical applicability of the control schemes for real-world dynamic navigation challenges.</li>
+							</ul>
+
+								<div style="text-align: center;">
+									<video width=575 height=auto controls>
+										<source src="videos/oprrt.mp4" type="video/mp4">
+										Your browser does not support the video tag.
+
+									</video>
+									<p style="text-align: center; font-size: 0.8em;">The video demonstrates OP-RRT in a dynamic 2D environment.</p>
+									
+								</div>
+
+								<div style="text-align: center;">
+									<video width=575 height=auto controls>
+										<source src="videos/RRTx_Husky_Warehouse.mp4" type="video/mp4">
+										Your browser does not support the video tag.
+
+									</video>
+									<p style="text-align: center; font-size: 0.8em;">The video demonstrates the implementation of RRTx on a Husky Robot in a dynamic environment.</p>
+									
+								</div>
+
+
+						
+						</article>
+
+						<!-- calib -->
+						<article id="calib">
+							<h2 style="text-decoration: underline;">Optimization-Based Kinematic Calibration of Hexapod Stewart Platform: Enhancing Precision through Boundary-Conscious Configurations</h2>
+							<ul>
+								<li><b>Optimization-Based Calibration:</b> Executed precise calibration of the hexapod Stewart platform, employing advanced optimization methods to refine kinematic accuracy.</li>
+								<li><b>Strategic Configuration Selection:</b> Chose measurement configurations close to the workspace boundary to enhance error observability, ensuring superior calibration results.</li>
+							</ul>
+							<div style="text-align: center;">
+								<img src="images/calib1.png" alt="RRTx Husky Robot Implementation" style="width: 575px; height: auto;"/>
+								<p style="text-align: center; font-size: 0.8em;">The photo shows random configuration point choosen in the workspace at different heights.</p>
+							</div>
+
+							<ul>
+								<li><b>Least Squares Optimization:</b> Utilized the leat square optimization to minimize the cost function effectively, achieving highly accurate parameter identification.</li>
+							</ul>
+							<div style="text-align: center;">
+								<img src="images/cf.png" alt="RRTx Husky Robot Implementation" style="width: 300px; height: auto;"/>
+							</div>
+							<ul>
+								<li><b>Complex Kinematic Modeling:</b> Implemented Inverse and Forward Kinematics modeling, leveraging nominal and simulated real values to calculate the pose and leg lengths.</li>
+								<li><b>Velocity Jacobian Integration:</b> Incorporated Jacobian matrices in both Nominal and Real Forward Kinematics to ensure dynamic response accuracy.</li>
+								<li><b>Workspace Boundary Analysis:</b> Employed 'config.m' to compute points near the workspace boundary, ensuring comprehensive calibration across the entire operational range.</li>
+								<li><b>Calibration and Validation:</b> Conducted thorough calibration using custom-developed MATLAB functions, followed by validation against predetermined configurations to ensure adherence to precise operational standards.</li>
+								<li><b>Result Visualization:</b> Presented calibration results through descriptive visualizations, highlighting the accuracy and effectiveness of the calibration process.</li>
+							</ul>
+
+							<div style="text-align: center;">
+								<img src="images/calib2.png" alt="RRTx Husky Robot Implementation" style="width: 575px; height: auto;"/>
+								<p style="text-align: center; font-size: 0.8em;">Comparitive result of errors before and after calibration.</p>
+							</div>
+						
+						</article>
+	
 
 						<!-- Contact -->
 							<article id="contact">
@@ -628,7 +1005,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p class="copyright">&copy; Design by: <a href="https://html5up.net">HTML5 UP</a>, Modified and used by Ankush Singh Bhardwaj.</p>
 					</footer>
 
 			</div>
